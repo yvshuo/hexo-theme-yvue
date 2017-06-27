@@ -29,5 +29,4 @@
   {% include "_partial/footer/after-footer.swig" %}
 </body>
 </html>
-test
 

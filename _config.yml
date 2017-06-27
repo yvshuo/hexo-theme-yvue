@@ -36,3 +36,10 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: true
+  app_id: HmeL0Aj2Mp5kT83LC723uQtt-gzGzoHsz
+  app_key: 0dnLgsnCdC4dFXd4wMci4Nyn

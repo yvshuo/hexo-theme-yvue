@@ -23,7 +23,16 @@
     </div>
     <div class="content with-sidebar blog post">
         <h1>{{ page.title }}</h1>
-        <h4>{{ page.date.format('MMM D[,] YYYY') }}</h4>
+        <h4>{{ page.date.format('MMM D[,] YYYY') }}
+            {# LeanCould PageView #}
+            {% if theme.leancloud_visitors.enable %}
+                <span id="{{ url_for(page.path) }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
+                    <span class="leancloud-visitors-count"></span>
+                </span>
+            {% endif %}
+        </h4>
+        
+        
         {{ page.content }}
         <div class="guide-links">
             {% if page.prev %}

@@ -34,3 +34,4 @@ window.addEventListener('scroll', function () {
     })
 {% endif %}
 </script>
+{% include '../analytic/lean-analytics.swig' %}
