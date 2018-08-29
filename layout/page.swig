@@ -3,7 +3,7 @@
 {% block content %}
   {% include "_partial/header/sidebar.swig"%}
 
-  <div class="content {% if page.type %}{{ page.type + ' with-sidebar' }}{% endif %}">
+  <div class="content {% if page.type %}{{ page.type }}{% endif %} {% if page.type !== 'tags' %}{{ 'with-sidebar' }}{% endif %}">
       {% if page.title.trim() %}
         <h1>{{ page.title }}</h1>
       {% endif %}
