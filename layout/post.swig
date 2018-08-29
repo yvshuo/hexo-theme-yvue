@@ -8,13 +8,14 @@
         <div class="list">
             <h2>
                 {{ __('post_lists') }}
+                <span style="font-weight:normal;font-size:16px">（共{{site.posts.length}}篇）</span>
             </h2>
             <ul style="padding:0">
             {% set sortPosts = site.posts.sort('date', -1) %}
             {% for _post in sortPosts %}
                 {% if loop.index0 > -1 %}
                     <li>
-                        <a href="{{ url_for(_post.path) }}" class="sidebar-link{% if page.title === _post.title %} current{% endif %}">{{ _post.title }}</a>
+                        <a href="{{ url_for(_post.path) }}" class="sidebar-link{% if page.title === _post.title %} current{% endif %}">{{ (loop.index0+1) + '、' + _post.title }}</a>
                     </li>
                 {% endif %}
             {% endfor %}
