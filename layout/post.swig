@@ -7,12 +7,12 @@
         </ul>
         <div class="list">
             <h2>
-                {{ __('recent_posts') }}
+                {{ __('post_lists') }}
             </h2>
             <ul style="padding:0">
             {% set sortPosts = site.posts.sort('date', -1) %}
             {% for _post in sortPosts %}
-                {% if loop.index0<10 %}
+                {% if loop.index0 > -1 %}
                     <li>
                         <a href="{{ url_for(_post.path) }}" class="sidebar-link{% if page.title === _post.title %} current{% endif %}">{{ _post.title }}</a>
                     </li>
