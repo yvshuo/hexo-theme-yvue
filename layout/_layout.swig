@@ -15,10 +15,6 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   {% endif %}
   {{ css('css/page') }}
-  <script src="https://cdn.ravenjs.com/3.19.1/raven.min.js" crossorigin="anonymous"></script>
-  <script>
-    Raven.config('http://aef818609cfb452f9f065e7e6362ef39@sentry.yvshuo.me/3').install()
-  </script>
   {{ js('js/vue.min.js') }}
   <script>window.PAGE_TYPE = "{{ page.type }}"</script>
 </head>

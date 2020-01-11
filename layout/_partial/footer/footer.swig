@@ -4,4 +4,6 @@
 	&copy;{{ dateNow }} {{ config.author || config.title }}
 	<br>
 	{{ __('powered_by') }} <a href="https://github.com/yvshuo/hexo-theme-yvue" target="_blank">Yvue</a>
+	<br>
+	{{ config.beian }}
 </div>
